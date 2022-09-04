@@ -1,0 +1,55 @@
+mat-button-toggle-group
+{
+    width: 100%;
+}
+
+mat-button-toggle-group mat-button-toggle{
+    width: 50%;
+}
+
+.member-list 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+mat-paginator{
+    padding: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+
+
+mat-list
+{
+    
+    cursor: pointer;
+}
+
+mat-list-item 
+{
+  margin: 10px;
+}
+
+
+mat-list mat-list-item img 
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.mat-button-toggle-checked {
+    background-color: aliceblue;
+}
+
+.mat-selection-list-checked
+{
+    background-color: yellow;
+}

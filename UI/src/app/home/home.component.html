@@ -1,0 +1,12 @@
+<app-nav></app-nav> 
+<div class="main">
+    <app-member-list (newItemEvent)="addItem($event)">
+        
+    </app-member-list>
+
+    <div *ngIf="welcome" class="welcome-box">
+        Welcome to My Chatting Application
+    </div>
+    <app-member-chatbox *ngIf="!welcome" [member]="member">
+    </app-member-chatbox>
+</div>

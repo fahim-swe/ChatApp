@@ -1,0 +1,91 @@
+ .previous-message-loading-tbn{
+    padding: 10px;
+    display: flex;
+    justify-content: end;
+}
+
+.chat-box
+{
+  height: 55vh;
+  overflow-y: scroll;
+}
+
+
+
+
+.content
+{
+   
+  margin: 10px;
+  padding: 10px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.content span
+{
+  margin: 10px;
+  padding: 10px;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.mymessage span{
+    margin-right: 5%;
+    background-color: aliceblue;
+    text-align: start;
+}
+
+.fndmessage
+{
+    text-align: end;
+    margin-left: 5%;
+}
+
+
+.chat-message .previous-message-loading-tbn{
+    padding: 10px;
+    display: flex;
+    justify-content: end;
+}
+
+.example-form {
+    overflow-y: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .example-full-width {
+    width: 90%;
+    height: 70px;
+  }
+
+
+  .example-button-container button{
+    
+    width: 70px;
+    height: 60px;
+  }
+
+  .example-full-width{
+    border-radius: 80px;
+  }
+  
+  
+  .example-full-width {
+    width: 90%;
+    height: 70px;
+  }
+
+
+  .example-button-container button{
+    
+    width: 70px;
+    height: 60px;
+  }
+
+  .example-full-width{
+    border-radius: 80px;
+  }
+  

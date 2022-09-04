@@ -1,0 +1,51 @@
+<div class="chat-box">
+    <div class="chat-message">
+        <div class="content">
+            <mat-tab-group (selectedTabChange)="tabChanged($event)">
+                <mat-tab>
+                  <ng-template mat-tab-label>
+                    <mat-icon>account_circle</mat-icon>
+                    {{member.userName}}
+                  </ng-template>
+                 
+                  <div class="member-details">
+
+                  
+                    <div>
+                      Username: 
+                      {{member.userName}}
+                    </div>
+                    
+                    <div>
+                      Fullname: 
+                      {{member.fullName}}
+                    </div>
+                    <div>
+                      Email: 
+                      {{member.email}}
+                    </div>
+                    <div>
+                      Created: 
+                      {{member.created | date}}
+                    </div>
+                  </div>
+                </mat-tab>
+              
+                <mat-tab>
+                  <ng-template mat-tab-label>
+                    <mat-icon> message  </mat-icon>
+                      Message
+                  </ng-template>
+                 
+                  <app-chat [usermessage]="usermessage" [recipientusername]="member.userName">
+
+                  </app-chat>
+                </mat-tab>
+    
+              </mat-tab-group>
+        </div>
+    </div>
+    
+</div>
+
+

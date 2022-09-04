@@ -1,0 +1,47 @@
+<div class="member-list">
+    <div>
+        <section>
+            <mat-button-toggle-group name="input"  aria-label="Font Style">
+              <mat-button-toggle color="primary" value="bold">All Member</mat-button-toggle>
+              <mat-button-toggle color="primary" value="italic">Active</mat-button-toggle>
+            </mat-button-toggle-group>
+        </section>
+        <!-- <mat-selection-list #shoes [multiple]="false">
+            <mat-list-option *ngFor="let shoe of typesOfShoes" [value]="shoe">
+                <span matBadge="4" matBadgeOverlap="false">Text with a badge</span>  
+                  
+            </mat-list-option>
+        </mat-selection-list> -->
+
+        
+        
+        <mat-list>
+            <mat-list-item (click)="handleClick(member)" *ngFor="let member of members">
+                    <img  src="../assets/user.png">                
+                    <p matBadge="4" matBadgeOverlap="false"  >
+                        {{member.fullName}}</p>
+                        
+                <mat-divider></mat-divider>
+            </mat-list-item>
+           
+        </mat-list>
+          
+        <!-- <p>
+            Option selected: {{shoes.selectedOptions.selected[0]?.value}}
+        </p> -->
+    </div>
+    <mat-paginator 
+         showFirstPage="true" 
+         hidePageSize="true" 
+         [length]="totalItem-1"
+        [pageSize]="pageSize"
+        [pageIndex]="pageNumber-1"
+        (page)="getServerData($event)"
+        >
+    </mat-paginator>
+</div>
+
+
+
+
+

@@ -1,0 +1,21 @@
+
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+     <mat-icon>menu</mat-icon>
+   </button>
+   <span>My App</span>
+   <span class="example-spacer"></span>
+   <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+     <mat-icon>favorite</mat-icon>
+   </button>
+   <button [matMenuTriggerFor]="menu" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon >keyboard_arrow_down</mat-icon>
+    <!-- <mat-icon >arrow_drop_down_circle</mat-icon> -->
+    <!-- <mat-icon>arrow_drop_down</mat-icon> -->
+  </button>
+ </mat-toolbar>
+
+<mat-menu #menu="matMenu" yPosition="above" xPosition="before">
+  <button mat-menu-item (click)="openDialog()"><mat-icon>edit</mat-icon>  Edit Profile </button>
+  <button mat-menu-item  (click)="logout()"> <i class="material-icons">logout</i> Logout</button>
+</mat-menu>

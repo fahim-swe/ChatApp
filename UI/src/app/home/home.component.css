@@ -1,0 +1,84 @@
+
+.main
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    width: 90%;
+    margin: 10px auto;
+} 
+
+app-member-list
+{
+    width: 24.5%;
+    height: 85vh;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+app-member-chatbox 
+{
+    width: 75%;
+    height: 85vh;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+
+
+
+
+
+/* Responsive code */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .main {
+        flex-direction: column;
+        background-color: yellow;
+        display: flex;
+        width: 100%;
+    }
+
+    app-member-list{
+        width: 100%;
+       
+    }
+
+    app-member-chatbox {
+        width: 100%;
+    }
+
+    app-nav{
+        width: 100%;
+    }
+    
+}
+
+.welcome-box
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-weight: 100;
+    font-size: 4rem;
+    text-align: center;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}

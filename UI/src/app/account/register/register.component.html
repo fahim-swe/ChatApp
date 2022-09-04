@@ -1,0 +1,112 @@
+
+
+
+
+<div class="loginSection">
+
+    <div class="loginSectionElement">
+        <mat-toolbar>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+              <mat-icon>menu</mat-icon>
+            </button>
+            <span>My App</span>
+            <span class="example-spacer"></span>
+            <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+              <mat-icon>favorite</mat-icon>
+            </button>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+              <mat-icon>share</mat-icon>
+            </button>
+            
+        </mat-toolbar>
+
+
+        <form [formGroup]="signUpFrom" (submit)="signup()" class="registrationSectionFrom" >
+            <mat-form-field  appearance="outline">
+                <mat-label>Full Name</mat-label>
+                <input 
+                    matInput 
+                    placeholder="Placeholder" 
+                    formControlName="fullname"
+                    required>
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-hint>hints: Muhammad fahim, Sabit islam bhuiya</mat-hint>
+                <mat-error *ngIf="!signUpFrom.get('fullname')?.valid">{{getErrorFullname()}}></mat-error>
+            </mat-form-field>
+            
+            <mat-form-field  appearance="outline">
+                <mat-label>Username</mat-label>
+                <input 
+                    matInput 
+                    placeholder="Placeholder" 
+                    required
+                    formControlName="username"
+                    >
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-hint>Hint: </mat-hint>
+                <mat-error *ngIf="!signUpFrom.get('username')?.valid">{{getErrorUsername()}}></mat-error>
+            </mat-form-field>
+          
+    
+            <mat-form-field appearance="outline">
+                <mat-label>Enter your email</mat-label>
+                <input 
+                    matInput 
+                    placeholder="pat@example.com" 
+                    formControlName="email" 
+                    required>
+                <mat-icon matSuffix>email</mat-icon>
+                <mat-error *ngIf="!signUpFrom.get('email')?.valid">{{getErrorMessage()}}></mat-error>
+            </mat-form-field>
+    
+            <mat-form-field appearance="outline">
+                <mat-label>Enter your password</mat-label>
+                <input 
+                    matInput [type]="hide ? 'password' : 'text'" 
+                    formControlName="password"
+                    required>
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-hint>hint:  N926rjZeBxNkJ@S, 99@TTsa3XSLth!k</mat-hint>
+                <mat-error *ngIf="!signUpFrom.get('password')?.valid">{{getErrorPassword()}}></mat-error>
+            </mat-form-field>
+    
+            <mat-form-field appearance="outline">
+                <mat-label>Confirm your password</mat-label>
+                <input 
+                    matInput 
+                    formControlName="confirmpassword"
+                    [type]="hide ? 'password' : 'text'" required>
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+            <button 
+                
+                    mat-stroked-button color="primary"
+                    type="submit"
+                    (click)=" signup()"
+            >SignUp</button>
+            
+
+            <div class="loginSectionFooter">
+                <p color="accent" > Alread Have An Account!</p>
+                <p
+                    routerLink="/login"
+                    >Login</p>
+            </div>   
+
+           
+            <div class="developer-info">
+                Developed By: 
+                Muhammad Fahim, Dept of Software Engineering(2018-19)
+                Shahjalal University Of Science & Technology, Sylhet; 
+                Contact:
+                <span> mdfahim1194@gmail.com</span>
+            </div>   
+            
+    </form>
+
+    </div>
+</div>

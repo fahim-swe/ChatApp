@@ -1,0 +1,65 @@
+.loginSection
+{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(#fdf3f3, #c5c8f3);
+}
+
+.loginSection div {
+    margin: 5%;
+    background-color: white;
+}
+
+.loginSectionElement{
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.loginSection div form{
+    padding: 30px;
+    width: 400px;
+}
+.loginSection div mat-form-field 
+{
+    display: inline;
+    background-color: red;
+}
+
+.loginSection div form button
+{
+    width: 100%;
+    font-weight: 900;
+    background-color: aliceblue;
+    background: linear-gradient(aliceblue, aliceblue);
+    text-decoration: underline;
+    font-size: larger;
+}
+
+.loginSectionFooter 
+{
+    display: flex;
+    justify-content: center;
+    font-weight: 300;
+   
+    background-color: aliceblue;
+}
+
+.loginSectionFooter :nth-child(2)
+{
+    color: red;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.developer-info
+{
+    font-weight: 100;
+    text-align: justify;
+    font-size: small;
+}
+
+.developer-info span
+{
+    color: red;
+    font-weight: 200;
+}

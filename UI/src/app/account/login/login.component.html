@@ -1,0 +1,75 @@
+
+
+
+
+<div class="loginSection">
+
+    <div class="loginSectionElement">
+        <mat-toolbar>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+              <mat-icon>menu</mat-icon>
+            </button>
+            <span>My App</span>
+            <span class="example-spacer"></span>
+            <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+              <mat-icon>favorite</mat-icon>
+            </button>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+              <mat-icon>share</mat-icon>
+            </button>
+            
+        </mat-toolbar>
+
+
+        <form [formGroup]="loginFrom" >
+
+            <mat-form-field  appearance="outline">
+                <mat-label>Username</mat-label>
+                <input 
+                    matInput 
+                    formControlName="username"
+                    placeholder="Placeholder">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-hint>Hint: </mat-hint>
+            </mat-form-field>
+
+
+            <mat-form-field  appearance="outline">
+                <mat-label>Password</mat-label>
+                <input
+                    formControlName="password"
+                    matInput 
+                    placeholder="Placeholder"
+                   
+                    
+                    >
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+        
+            <button 
+                type="submit"
+                (click)="login()"
+                mat-stroked-button color="primary"
+            >Login</button>
+            
+
+            <div class="loginSectionFooter">
+                <p 
+                    color="accent"
+                    routerLink="/signup"
+                    >Register as new User?  </p>
+                <p>Forget Password</p>
+            </div>   
+            <div class="developer-info">
+                Developed By: 
+                Muhammad Fahim, Dept of Software Engineering(2018-19)
+                Shahjalal University Of Science & Technology, Sylhet; 
+                Contact:
+                <span> mdfahim1194@gmail.com</span>
+            </div>       
+        </form>
+    </div>
+</div>
+
+

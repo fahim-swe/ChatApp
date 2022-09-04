@@ -1,0 +1,49 @@
+<div class="previous-message-loading-tbn">
+    <button mat-stroked-button>Load Previous message</button>
+</div>
+
+<div class="chat-box">
+
+    <div>
+
+        <div 
+        
+        *ngFor="let message of usermessage?.data" >
+           
+            <div class="content mymessage" *ngIf="message.recipientUsername !== recipientusername">
+                <span>{{message.content}}</span>
+            </div>
+
+            <div class="content fndmessage" *ngIf="message.recipientUsername === recipientusername">
+                <span>{{message.content}}</span>
+            </div> 
+        </div>
+        
+       
+
+    </div>
+
+</div>
+
+
+<div>
+    <form #messageFrom="ngForm" class="example-form">
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Message</mat-label>
+          <input 
+            matInput 
+            #message 
+            name="messgeContent"
+            [(ngModel)]="messgeContent"
+            
+            maxlength="256" placeholder="Ex. I need help with...">
+          <mat-hint align="start"><strong>Don't disclose personal info</strong> </mat-hint>
+          <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+        </mat-form-field>
+        <div class="example-button-container">
+            <button (click)="sendMessage()" mat-stroked-button color="white">
+                <mat-icon>send</mat-icon>
+            </button>
+        </div>
+    </form>
+</div>
